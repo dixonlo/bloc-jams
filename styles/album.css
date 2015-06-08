@@ -50,11 +50,15 @@ body.album{
 }
 
 .song-item-title{
-    width:85%;
+    width:80%;
 }
 
 .song-item-duration{
-    wigth:5%;
+    width:5%;
+}
+
+.song-item-plays{
+    width:5%;
 }
 
 @media (max-width:40rem) and (min-width:20rem){
