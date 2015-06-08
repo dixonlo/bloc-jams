@@ -1,101 +1,79 @@
-*, *:before, *:after {
-    -moz-box-sizing:border-box;
-    -webkit-box-sizing:border-box;
-    box-sizing:border-box;
-}
-    
-
-html {
-    height:100%;
+body.album{
+    background-image: url(../assets/images/blurred_backgrounds/blur_bg_3.jpg);
+    background-repeat: repeat-y;
+    background-position: center center;
+    background-size: cover;
 }
 
-body {
-    font-family: 'Open Sans';
-    color:white;
-    min-height:100%;
+.album-cover-art{
+    position: relative;
+    left:20%;
+    margin-top:1rem;
+    width:60%;
 }
 
-.navbar {
+.album-view.details{
     position:relative;
-    padding:0.5rem;
-    background-color: rgba(101,18,95,0.5);
-    z-index: 1;
+    top:1.5rem;
+    padding:1rem;
 }
 
-.navbar .logo{
-    position: relative; 
-    left: 2rem;
-    cursor:pointer;
+.album-view-details .album-view-title{
+    font-weight: 300;
+    font-size:2rem;
 }
 
-.navbar .links-container {
-    display:table;
-    position:absolute;
-    top:0;
-    right:0;
-    height:100px;
-    color:white;
-    text-decoration:none;
+.album-view-details .album-view-artist{
+    font-weight:300;
+    font-size:1.5rem;
 }
 
-.links-container .navbar-link{
-    display:table-cell;
-    position:relative;
-    height:100%;
-    padding-left:1rem;
-    padding-right:1rem;
-    vertical-align:middle;
-    color:white;
-    font-size:0.625rem;
-    letter-spacing:0.05rem;
-    font-weight:700;
-    text-transform:uppercase;
-    text-decoration:none;
-    cursor:pointer;
+.album-view-details .album-view-release-info{
+    font-weight:300;
+    font-size:0.75rem;
 }
 
-.links-container .navbar-link:hover {
-    color: rgb(233,50,117);
+.album-view-song-list{
+    width:90%;
+    margin:1.5rem auto;
+    font-weight:300;
+    font-size:0.75em;
 }
 
-.links-container .navbar-link:active {
-    background-color: rgb(255,255,255);
+.album-view-song-item{
+    height:3rem;
+    border-bottom:1px solid rgba(255,255,255,0.5);
 }
 
-.container {
-    margin: 0 auto;
-    max-width: 64rem;
+.song-item-number{
+    width:5%;
 }
 
-/*Medium and small screens (640px)*/
-@media (min-width:40rem){
-    html {font-size: 112%;}
-    
-    .column {
-        float:left;
-        padding-left:1rem;
-        padding-right:1rem;
+.song-item-title{
+    width:85%;
+}
+
+.song-item-duration{
+    wigth:5%;
+}
+
+@media (max-width:40rem) and (min-width:20rem){
+    .album-view-details{
+        text-align:center
     }
     
-    .column.full {width:100%;}
-    .column.two-thirds{width:66.7%;}
-    .column.half{width:50%;}
-    .column.third{width:33.3%;}
-    .column.fourth{width:25%;}
-    .column.flow-opposite{float:right;}
-    
+    .album-view-title{
+        margin-top:0;
+    }
 }
 
-/*Large screens(1024px) */
-@media (min-width:64rem){
-    html {font-size: 120%;}
+@media (max-width:64rem) and (min-width:20rem){
+    .album-view-song-list{
+        position:relative;
+        top:1rem;
+        width:80%;
+        margin:auto;
+    }
 }
 
-.clearfix:before,
-.clearfix:after{
-    content:" ";
-    display:table;
-}
-.clearfix:after{
-    clear:both;
-}
+
